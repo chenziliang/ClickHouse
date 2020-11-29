@@ -160,6 +160,8 @@ private:
       */
     void initSettings();
 
+    void getDependentAliasColumns(const std::string & column, std::map<std::string, ASTPtr> & required_alias_columns);
+
     SelectQueryOptions options;
     ASTPtr query_ptr;
     std::shared_ptr<Context> context;
